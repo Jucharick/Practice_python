@@ -13,7 +13,6 @@ def pressure_logger(data):
         file.write('{};pressure;{}\n'
                     .format(time, data))
 
-
 def wind_speed_logger(data):
     time = dt.now().strftime('%H:%M')
     with open('log.csv', 'a') as file:
