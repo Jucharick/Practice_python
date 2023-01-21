@@ -26,10 +26,11 @@ def new_create(data ,device = 1):
     html = '<html>\n  <head></head>\n  <body>\n'
     html += '    <p {}>Temperature: {} c</p>\n'\
         .format(style, t)
-    html += '    <p {}>Wind_speed: {} m/s</p>\n'\
-        .format(style, w)
     html += '    <p {}>Pressure: {} mmHg</p>\n'\
         .format(style, p)
+    html += '    <p {}>Wind_speed: {} m/s</p>\n'\
+        .format(style, w)
+        
     html += '  </body>\n</html>'
     
     with open('new_index.html', 'w') as page:

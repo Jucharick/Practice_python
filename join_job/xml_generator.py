@@ -25,14 +25,13 @@ def new_create(data, device = 1):
     xml = '<xml>\n'
     xml += '    <temperature units = "f">{}</temperature>\n'\
         .format(t)
-    xml += '    <wind_speed_view units = "m/s">{}</wind_speed_view>\n'\
-        .format(w)
     xml += '    <pressure units = "mmHg">{}</pressure>\n'\
         .format(p)
+    xml += '    <wind_speed_view units = "m/s">{}</wind_speed_view>\n'\
+        .format(w)
     xml += '</xml>'
 
     with open('new_data.xml', 'w') as page:
         page.write(xml)
 
     return data
-    
